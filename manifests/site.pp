@@ -1,8 +1,11 @@
 node 'client.example.com' {
 
   user { 'bruno.siva' :
-    home   => '/home/bruno.silva',
-    ensure => 'present',
+    ensure     => present,
+    uid        => '1000',
+    gid        => '1000',
+    shell      => '/bin/bash',
+    home       => '/home/bruno.silva',
   }
 
 
