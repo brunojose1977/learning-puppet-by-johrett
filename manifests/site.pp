@@ -1,7 +1,7 @@
 node 'client.example.com' {
 
-  file {'/home/vagrant/file-env-dev.txt' :
-    content => 'Arquivo criado para o ambiente DEV',
+  file {'/home/vagrant/file-env-prod.txt' :
+    content => 'Conteúdo levado para o ambiente de PRODUCTION',
     ensure  => 'present',
   }
 
