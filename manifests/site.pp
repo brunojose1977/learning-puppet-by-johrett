@@ -11,8 +11,12 @@ node 'web1.example.com' {
     ensure  => 'present',
   }
 
-  notify { 'Dados do Hiera':
-    message  => lookup('frase')+' Autor: '+lookup('autor'),
+  notify { 'Dados do Hiera - Frase':
+    message  => lookup('frase'),
+  }
+
+  notify { 'Dados do Hiera - Autor':
+    message  => lookup('autor'),
   }
 }
 
