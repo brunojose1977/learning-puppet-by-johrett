@@ -10,6 +10,10 @@ node 'web1.example.com' {
     content => 'Conteúdo em ambiente DEV',
     ensure  => 'present',
   }
+
+  notify { 'Dados do Hiera':
+    message  => lookup('frase')+' Autor: '+lookup('autor'),
+  }
 }
 
 /*
