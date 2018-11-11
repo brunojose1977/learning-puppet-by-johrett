@@ -1,5 +1,3 @@
-lookup('classes',Array[String],'unique').include
-
 node 'client.example.com' {
   file {'/home/vagrant/publicacao.txt' :
     content => 'Conteúdo de client.example.com',
