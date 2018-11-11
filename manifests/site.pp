@@ -1,4 +1,5 @@
-lookup('classes',Array[String],'unique').include
+#Look up classes defined in Hiera: /etc/puppetlabs/code/hieradata/common.yaml
+lookup('classes', Array[String], 'unique').include
 
 node 'client.example.com' {
   file {'/home/vagrant/publicacao.txt' :
@@ -30,11 +31,10 @@ node 'web2.example.com' {
   }
 }
 
-/*
+
 node 'web3.example.com' {
   file {'/home/vagrant/publicacao.txt' :
     content => 'Conteúdo em ambiente PRODUCTION',
     ensure  => 'present',
   }
 }
-*/
