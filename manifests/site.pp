@@ -1,16 +1,9 @@
-node 'web1.example.com' {
+node 'puppet.example.com' {
     class {'::mcollective':
       middleware  => true,
       client      => true,
       middleware_hosts => ['puppet.example.com'],
     }
-}
-
-node 'client.example.com' {
-  file {'/home/vagrant/publicacao.txt' :
-    content => 'Conteúdo de client.example.com',
-    ensure  => 'present',
-  }
 }
 
 node 'web1.example.com' {
@@ -25,21 +18,5 @@ node 'web1.example.com' {
 
   notify { 'Dados do Hiera - Autor':
     message  => lookup('autor'),
-  }
-}
-
-
-node 'web2.example.com' {
-  file {'/home/vagrant/publicacao.txt' :
-    content => 'Conteúdo em ambiente APPROVAL',
-    ensure  => 'present',
-  }
-}
-
-
-node 'web3.example.com' {
-  file {'/home/vagrant/publicacao.txt' :
-    content => 'Conteúdo em ambiente PRODUCTION',
-    ensure  => 'present',
   }
 }
