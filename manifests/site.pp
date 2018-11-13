@@ -28,7 +28,7 @@ node 'web1.example.com' {
   }
 }
 
-/*
+
 node 'web2.example.com' {
   file {'/home/vagrant/publicacao.txt' :
     content => 'Conteúdo em ambiente APPROVAL',
@@ -36,10 +36,10 @@ node 'web2.example.com' {
   }
 }
 
+
 node 'web3.example.com' {
   file {'/home/vagrant/publicacao.txt' :
     content => 'Conteúdo em ambiente PRODUCTION',
     ensure  => 'present',
   }
 }
-*/
