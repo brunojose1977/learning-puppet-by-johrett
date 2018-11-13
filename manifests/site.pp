@@ -1,3 +1,11 @@
+node 'web1.example.com' {
+    class {'::mcollective':
+      middleware  => true,
+      client      => true,
+      middleware_hosts => ['puppet.example.com'],
+    }
+}
+
 node 'client.example.com' {
   file {'/home/vagrant/publicacao.txt' :
     content => 'Conteúdo de client.example.com',
