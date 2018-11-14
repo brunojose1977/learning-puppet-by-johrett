@@ -49,6 +49,8 @@ mod 'instruct/mcollective',
   :git => 'https://github.com/instruct-br/puppet-mcollective.git',
   :ref => 'master'
 
-mod 'instruct/rnp_pkg',
-  :git => 'ssh://git.rnp.br/gsc-puppet-video-labs/rnp_pkg.git',
-  :ref => 'master'
+
+#mod 'instruct/rnp_pkg',
+#  :git => 'ssh://git.rnp.br/gsc-puppet-video-labs/rnp_pkg.git',
+#  :ref => 'master'
+#  
