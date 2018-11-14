@@ -1,9 +1,10 @@
+node default {
+  if 'Linux' == $::facts['kernel'] {
+    include profiles::base::linux
+  }
+
 node 'puppet.example.com' {
-    class {'::mcollective':
-      middleware  => true,
-      client      => true,
-      middleware_hosts => ['puppet.example.com'],
-    }
+  include roles::puppet::monolitico
 }
 
 node 'web1.example.com' {
