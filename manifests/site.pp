@@ -16,13 +16,13 @@ node 'web1.example.com' {
 
   ## inicio do meu código de teste
 
-  file '/home/vagrant/teste01.txt': {
-    ensure => 'present',
-    content => 'Conteúdo do arquivo teste01.txt',
+  file { '/home/vagrant/teste01.txt':
+    ensure  => 'present',
+    content => 'Valor do arquivo teste01.txt',
   }
 
-  file '/home/vagrant/teste02.txt': {
-    ensure => 'present',
+  file { '/home/vagrant/teste02.txt':
+    ensure  => 'present',
     content => 'Conteúdo do arquivo teste02.txt',
   }
 
