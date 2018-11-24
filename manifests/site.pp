@@ -3,6 +3,10 @@ node 'web1.example.com' {
   include roles::veiculo::aereo::aviao
 }
 
+node 'web1.example.com' {
+  include roles::veiculo::terrestre::carro
+}
+
 node default {
   if 'Linux' == $::facts['kernel'] {
     include profiles::base::linux
