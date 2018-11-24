@@ -1,3 +1,3 @@
 class roles::casa::entrega::liberacao{
-  include construcao-civil::documentacao::rgi
+  include construcao_civil::documentacao::rgi
 }
