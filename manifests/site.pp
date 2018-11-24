@@ -4,11 +4,11 @@ node 'web1.example.com' {
 }
 
 node 'web2.example.com' {
-  include roles::veiculo::terrestre::carro
+  include roles::casa::padrao
 }
 
 node 'web3.example.com' {
-  include roles::casa::padrao
+  include roles::predio::padrao
 }
 
 node default {
