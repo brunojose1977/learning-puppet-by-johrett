@@ -3,7 +3,7 @@ node 'web1.example.com' {
   include roles::veiculo::aereo::aviao
 }
 
-node 'web1.example.com' {
+node 'web2.example.com' {
   include roles::veiculo::terrestre::carro
 }
 
