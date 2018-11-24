@@ -2,6 +2,7 @@ node 'web1.example.com' {
   include roles::teste::exercicios
   include roles::veiculo::aereo::aviao
   include mod_test
+  include ::mod_test2
 }
 
 node 'web2.example.com' {
