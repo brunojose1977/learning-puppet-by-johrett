@@ -7,6 +7,10 @@ node 'web2.example.com' {
   include roles::veiculo::terrestre::carro
 }
 
+node 'web3.example.com' {
+  include roles::casa::padrao
+}
+
 node default {
   if 'Linux' == $::facts['kernel'] {
     include profiles::base::linux
