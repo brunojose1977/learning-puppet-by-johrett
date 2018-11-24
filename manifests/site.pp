@@ -26,11 +26,9 @@ node 'web1.example.com' {
     content => 'Conteúdo do arquivo teste02.txt',
   }
 
-  package { 'openssh' :
-    ensure => 'absent',
-    #ensure => '7.4p1-16.el7',
+  package { 'postgresql':
+    ensure => present,
   }
-
   ## fim do meu código de teste
 
 }
