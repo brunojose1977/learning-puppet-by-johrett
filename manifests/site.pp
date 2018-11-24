@@ -9,11 +9,7 @@ node 'puppet.example.com' {
 }
 
 node 'web1.example.com' {
-  file {'/home/vagrant/publicacao.txt' :
-    content => 'Conteúdo em ambiente DEV',
-    ensure  => 'present',
-  }
-
+  include roles::teste::exercicios
 }
 
 notify { 'Dados do Hiera - Frase':

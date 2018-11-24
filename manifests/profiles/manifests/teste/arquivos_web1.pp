@@ -1,4 +1,4 @@
-class arquivos_web1{
+class profiles::teste::arquivos_web1{
 
   file { '/home/vagrant/teste01.txt' :
     ensure  => 'present',
