@@ -13,6 +13,21 @@ node 'web1.example.com' {
     content => 'Conteúdo em ambiente DEV',
     ensure  => 'present',
   }
+
+  ## inicio do meu código de teste
+
+  file '/home/vagrant/teste01.txt': {
+    ensure => 'present',
+    content => 'Conteúdo do arquivo teste01.txt',
+  }
+
+  file '/home/vagrant/teste02.txt': {
+    ensure => 'present',
+    content => 'Conteúdo do arquivo teste02.txt',
+  }
+
+  ## fim do meu código de teste
+
 }
 
 notify { 'Dados do Hiera - Frase':
