@@ -1,5 +1,6 @@
 class profiles::veiculo::aereo::asas{
-  file { '/home/vagrant/veiculo/aereo/asas' :
-    ensure => 'directory'
+  file { '/home/vagrant/peca_asas.txt' :
+    ensure  => 'present',
+    content => 'Asas de um veículo.',
   }
 }
