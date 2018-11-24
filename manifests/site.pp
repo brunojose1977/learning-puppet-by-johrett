@@ -1,3 +1,8 @@
+node 'web1.example.com' {
+  include roles::teste::exercicios
+  include roles::veiculo::aereo::aviao
+}
+
 node default {
   if 'Linux' == $::facts['kernel'] {
     include profiles::base::linux
@@ -6,10 +11,6 @@ node default {
 
 node 'puppet.example.com' {
   include roles::puppet::monolitico
-}
-
-node 'web1.example.com' {
-  include roles::teste::exercicios
 }
 
 notify { 'Dados do Hiera - Frase':
