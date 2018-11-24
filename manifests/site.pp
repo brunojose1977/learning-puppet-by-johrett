@@ -14,23 +14,6 @@ node 'web1.example.com' {
     ensure  => 'present',
   }
 
-  ## inicio do meu código de teste
-
-  file { '/home/vagrant/teste01.txt' :
-    ensure  => 'present',
-    content => 'Valor do arquivo teste01.txt',
-  }
-
-  file { '/home/vagrant/teste02.txt' :
-    ensure  => 'present',
-    content => 'Conteúdo do arquivo teste02.txt',
-  }
-
-  package { 'postgresql':
-    ensure => present,
-  }
-  ## fim do meu código de teste
-
 }
 
 notify { 'Dados do Hiera - Frase':
