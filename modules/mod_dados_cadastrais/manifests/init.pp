@@ -38,6 +38,5 @@ class mod_dados_cadastrais {
 
 
   notify { "O FNDN desse node é ${::fqdn}" : } #doing interpolation here
-  notify { "O Modelo do disco é ${::disks.sda.size}" : }
   notify { "O Modelo do disco é ${::disks['sda']['size']}" : }
 }
