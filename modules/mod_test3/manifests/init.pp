@@ -6,15 +6,21 @@ class mod_test3 {
 
     notify { "O FNDN desse node é ${::fqdn}" : } #doing interpolation here
 
+    notify { "***************************************" : }
+
   ## way 2
 
     notify { 'show fqdn from facter' :
         message  => "O FNDN desse node é ${::fqdn}", #interpolation here
     }
 
+    notify { "***************************************" : }
+
   ## way 3
 
     notify { 'show text from hiera' :
         message  => lookup('the_fqdn'),
     }
+
+    notify { "***************************************" : }
 }
