@@ -4,6 +4,7 @@ node 'web1.example.com' {
   include ::mod_test
   include ::mod_test2
   include ::mod_test3
+  include ::mod_dados_cadastrais
 }
 
 node 'web2.example.com' {
