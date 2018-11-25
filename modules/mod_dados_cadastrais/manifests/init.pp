@@ -20,7 +20,7 @@ class mod_dados_cadastrais {
     message => "\n\n
     ## DADOS CADASTRAIS                                     \n
     empresa                 :
-    departamento            : $departamento
+    departamento            : ${departamento}
     cargo                   : $cargo
     ramal                   : $ramal
     modelo de disco         : $modelo_de_disco
