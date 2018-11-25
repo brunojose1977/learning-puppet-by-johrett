@@ -3,15 +3,12 @@
 # diretamento dentro do manifesto
 class mod_test3 {
   ## way 1
-    notify { "W1 - O FNDN desse node é ${::fqdn}" : } #doing interpolation here
+    notify { "\nW1 - O FNDN desse node é ${::fqdn}\n\n" : } #doing interpolation here
 
-    notify { 'blank_line_1' :
-        message  => "                      ",
-    }
 
   ## way 2
     notify { 'W2 - Show fqdn from facter' :
-        message  => "W2 - FNDN desse node é ${::fqdn}", #interpolation here
+        message  => "\n\n W2 - FNDN desse node é ${::fqdn} \n\n", #interpolation here
         withpath => false,
     }
 
@@ -20,21 +17,16 @@ class mod_test3 {
     ## the same as command: facter os.name
     ## the same as command: facter os.hardware
     notify { 'W2 - System Uptime' :
-      message => "
+      message => "\n\n
         W2 - System is uptime for ${::system_uptime['seconds']} seconds.\n
         W2 - OS Family ${::os['family']}\n.
         W2 - OS Distribution ${::os['name']}.\n
-        W2 - OS Hardware ${::os['hardware']}.
+        W2 - OS Hardware ${::os['hardware']}.\n\n
       "
     }
 
-    notify { 'blank_line_2' :
-        message  => "                      ",
-        withpath => false,
-    }
-
   ## way 3
-    notify { ' W3 - show text from hiera' :
+    notify { 'W3 - show text from hiera' :
         message  => lookup('the_fqdn'),
         withpath => false,
     }
