@@ -14,19 +14,19 @@ class mod_test3 {
 
     notify { 'show fqdn from facter' :
         message  => "O FNDN desse node é ${::fqdn}", #interpolation here
-        withpath => no,
+        withpath => false,
     }
 
     notify { 'printout2' :
         message  => "                      ",
-        withpath => no,
+        withpath => false,
     }
 
   ## way 3
 
     notify { 'show text from hiera' :
         message  => lookup('the_fqdn'),
-        withpath => no,
+        withpath => false,
     }
 
 
