@@ -3,5 +3,7 @@ class mod_test3 {
     ensure  => 'directory',
     recurse => true,
     recurselimit => 3,
+    purge => true, # purge all unmanaged junk
+    force => true, # also purge subdirs and links etc.
   }
 }
