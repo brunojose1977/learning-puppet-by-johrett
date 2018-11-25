@@ -1,7 +1,13 @@
 class mod_test3 {
 
+  notify { 'xxx Hello ${::fqdn}. xxx' : }
+
+  notify { "aaa Hello ${::fqdn}. aaa" : }
+
+  notice ( "bbb Hello ${::fqdn}. bbb")    
+
   notify { 'notify test1' :
-    message => '### Hello ${::fqdn}. ###',
+    message => 'yyy Hello ${::fqdn}. yyy',
   }
 
   notify { 'notify test2' :
