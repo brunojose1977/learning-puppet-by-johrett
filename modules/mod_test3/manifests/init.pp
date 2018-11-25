@@ -6,7 +6,7 @@ class mod_test3 {
 
     notify { "O FNDN desse node é ${::fqdn}" : } #doing interpolation here
 
-    notify { "***************************************" : }
+    notify { '** bloco de notificações 1 ** XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx' : }
 
   ## way 2
 
@@ -14,7 +14,7 @@ class mod_test3 {
         message  => "O FNDN desse node é ${::fqdn}", #interpolation here
     }
 
-    notify { "***************************************" : }
+    notify { '** bloco de notificações 2 ** XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx' : }
 
   ## way 3
 
@@ -22,5 +22,5 @@ class mod_test3 {
         message  => lookup('the_fqdn'),
     }
 
-    notify { "************************************" : }
+    notify { 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx' : }
 }
