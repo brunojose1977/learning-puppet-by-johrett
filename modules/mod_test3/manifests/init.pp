@@ -17,7 +17,7 @@ class mod_test3 {
 
     ## the same as command: facter system_uptime.seconds
     notify { 'W2 - System Uptime' :
-      message => "W2 - System is uptime for ${::system_uptime['seconds']} seconds."
+      message => "W2 - System is uptime for {${::system_uptime['seconds']}/60} seconds."
     }
 
     notify { 'blank_line_2' :
