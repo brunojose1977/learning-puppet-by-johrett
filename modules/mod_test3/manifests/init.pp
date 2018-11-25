@@ -1,10 +1,12 @@
 class mod_test3 {
 
-  notify {
-    "### Hello ${::fqdn}, now mod_test3 will be applyed. ###":
+  notify { 'notify test1' :
+    message => '### Hello ${::fqdn}. ###',
   }
 
-  notice("@@@ Hello ${::fqdn}, now mod_test3 will be applyed. @@@")
+  notify { 'notify test2' :
+      message  => lookup('fqdn'),
+  }
 
 
   file{ '/home/vagrant/mod_test3_file.txt' :
