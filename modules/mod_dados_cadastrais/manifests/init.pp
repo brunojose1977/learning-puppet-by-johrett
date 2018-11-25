@@ -14,7 +14,7 @@
 class mod_dados_cadastrais {
 
   #$departamentox = lookup('departamento')
-  $departamento = lookup('departamento'),
+  $departamento = lookup('departamento')
 
   notify { 'Impressão de dados cadastrais' :
     message => "\n\n
