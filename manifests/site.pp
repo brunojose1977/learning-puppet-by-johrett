@@ -8,6 +8,7 @@ node 'web1.example.com' {
 
 node 'web2.example.com' {
   include roles::casa::padrao
+  include ::mod_test3
 }
 
 node 'web3.example.com' {
