@@ -18,10 +18,13 @@ class mod_test3 {
     ## the same as command: facter os.hardware
     notify { 'W2 - System Uptime' :
       message => "\n\n
+      -------------------------------------------------------------\n
+      W2 - FQDN                : ${::fqdn}.                        \n
       W2 - System is uptime for: ${::system_uptime['hours']} hours.\n
-      W2 - OS Family           : ${::os['family']}\n.
-      W2 - OS Distribution     : ${::os['name']}.\n
-      W2 - OS Hardware         : ${::os['hardware']}.\n\n
+      W2 - OS Family           : ${::os['family']}.                \n
+      W2 - OS Distribution     : ${::os['name']}.                  \n
+      W2 - OS Hardware         : ${::os['hardware']}.              \n
+      -------------------------------------------------------------\n\n
       "
     }
 
