@@ -17,7 +17,7 @@ class mod_dados_cadastrais {
     message => "\n\n
     ## DADOS CADASTRAIS                                     \n
     empresa                 :
-    departamento            : GSC
+    departamento            : lookup('departamento')
     cargo                   : COORDENADOR
     ramal                   : 9999
     modelo de disco         : **PEGAR DO HIERA**
