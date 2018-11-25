@@ -3,6 +3,6 @@ class mod_test3 {
     ensure  => 'directory',
     content => 'Arquivo criado pelo módulo mod_test3.',
     recurse => true,
-    recurselimit => 2
+    recurselimit => 3,
   }
 }
