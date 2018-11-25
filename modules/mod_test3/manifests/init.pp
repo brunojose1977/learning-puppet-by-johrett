@@ -16,8 +16,16 @@ class mod_test3 {
     }
 
     ## the same as command: facter system_uptime.seconds
+    ## the same as command: facter os.family
+    ## the same as command: facter os.name
+    ## the same as command: facter os.hardware
     notify { 'W2 - System Uptime' :
-      message => "W2 - System is uptime for {${::system_uptime['seconds']}/60} seconds."
+      message => "
+        W2 - System is uptime for ${::system_uptime['seconds']} seconds.\n
+        W2 - OS Family ${::os['family']}\n.
+        W2 - OS Distribution ${::os['name']}.\n
+        W2 - OS Hardware ${::os['hardware']}.
+      "
     }
 
     notify { 'blank_line_2' :
