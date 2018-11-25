@@ -13,17 +13,24 @@
 # Localização desse módulo: /etc/puppetlabs/code/environments/dev/modules/mod_dados_cadastrais
 class mod_dados_cadastrais {
 
-  #$departamentox = lookup('departamento')
-  $departamento = lookup('departamento')
+  #Carga de dados cadastrais do Hieradata - common.yaml
+
+  $empresa          = lookup('empresa')
+  $departamento     = lookup('departamento')
+  $cargo            = lookup('cargo')
+  $ramal            = lookup('ramal')
+  $modelo_de_disco  = lookup('modelo_de_disco')
+  $tamanho_do_disco = lookup('tamanho_de_disco')
+
 
   notify { 'Impressão de dados cadastrais' :
     message => "\n\n
     ## DADOS CADASTRAIS                                     \n
-    empresa                 :
+    empresa                 : ${empresa}
     departamento            : ${departamento}
-    cargo                   : $cargo
-    ramal                   : $ramal
-    modelo de disco         : $modelo_de_disco
+    cargo                   : ${cargo}
+    ramal                   : ${ramal}
+    modelo de disco         : ${modelo_de_disco}
     tamanho do disco        : ${::disks['sda']['size']}
     "
   }
