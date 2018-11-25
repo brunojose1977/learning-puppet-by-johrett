@@ -1,13 +1,20 @@
+##Bruno Silva
+# função deste módulo é testar o uso do facter tanto no hiera como
+# diretamento dentro do manifesto
 class mod_test3 {
+  ## way 1
 
-  notify { "aaa Hello ${::fqdn}. aaa" : }
+    notify { "O FNDN desse node é ${::fqdn}" : } #doing interpolation here
 
-  notify { 'notify test2' :
-      message  => lookup('fqdn'),
-  }
+  ## way 2
 
-  file{ '/home/vagrant/mod_test3_file.txt' :
-    ensure  => 'present',
-    content => 'Arquivo criado pelo mod_test3',
-  }
+    notify { 'show fqdn from facter' :
+        message  => "O FNDN desse node é ${::fqdn}", #interpolation here
+    }
+
+  ## way 3
+
+    notify { 'show text from hiera' :
+        message  => lookup('the_fqdn'),
+    }
 }
