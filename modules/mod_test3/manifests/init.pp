@@ -4,30 +4,29 @@
 class mod_test3 {
   ## way 1
 
-    notify { "O FNDN desse node é ${::fqdn}" : } #doing interpolation here
+    notify { "W1 - O FNDN desse node é ${::fqdn}" : } #doing interpolation here
 
-    notify { 'printout1' :
+    notify { 'blank_line_1' :
         message  => "                      ",
     }
 
   ## way 2
 
-    notify { 'show fqdn from facter' :
-        message  => "O FNDN desse node é ${::fqdn}", #interpolation here
+    notify { 'W2 - Show fqdn from facter' :
+        message  => "W2 - FNDN desse node é ${::fqdn}", #interpolation here
         withpath => false,
     }
 
-    notify { 'printout2' :
+    notify { 'blank_line_2' :
         message  => "                      ",
         withpath => false,
     }
 
   ## way 3
 
-    notify { 'show text from hiera' :
+    notify { ' W3 - show text from hiera' :
         message  => lookup('the_fqdn'),
         withpath => false,
     }
-
 
 }
