@@ -22,7 +22,7 @@ class mod_dados_cadastrais {
   $modelo_de_disco  = lookup('modelo_de_disco')
   #$tamanho_do_disco = lookup('tamanho_de_disco')
 
-
+/*
   notify { 'Impressão de dados cadastrais' :
     message => "\n\n
     ## DADOS CADASTRAIS                                     \n
@@ -34,4 +34,10 @@ class mod_dados_cadastrais {
     tamanho do disco        : ${::disks['sda']['size']}
     "
   }
+  */
+
+
+  notify { "O FNDN desse node é ${::fqdn}" : } #doing interpolation here
+  notify { "O Modelo do disco é ${::disks.sda.size}" : }
+  notify { "O Modelo do disco é ${::disks['sda']['size']}" : }
 }
