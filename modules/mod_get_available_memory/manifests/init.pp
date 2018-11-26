@@ -11,7 +11,8 @@ class mod_get_available_memory {
 
   file{ "/home/vagrant/${filename}" :
     ensure => 'present',
-    source => "puppet:///modules/mod_get_available_memory/${filename} ",
+    #source => "puppet:///modules/mod_get_available_memory/${filename} ",
+    source => "puppet:///modules/mod_get_available_memory/mod_export_file_memory.txt",
   }
 
   notify { "\n\nA file ${filename} was installed on your system!\n\n" : }
