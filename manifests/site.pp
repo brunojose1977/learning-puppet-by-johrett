@@ -1,10 +1,11 @@
 node 'web1.example.com' {
-  include roles::teste::exercicios
-  include roles::veiculo::aereo::aviao
-  include ::mod_test
-  include ::mod_test2
-  include ::mod_test3
-  include ::mod_dados_cadastrais
+  #include roles::teste::exercicios
+  #include roles::veiculo::aereo::aviao
+  #include ::mod_test
+  #include ::mod_test2
+  #include ::mod_test3
+  #include ::mod_dados_cadastrais
+  include ::mod_get_avalilable_memory
 }
 
 node 'web2.example.com' {
