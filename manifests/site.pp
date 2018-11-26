@@ -5,7 +5,7 @@ node 'web1.example.com' {
   #include ::mod_test2
   #include ::mod_test3
   #include ::mod_dados_cadastrais
-  include ::mod_get_avalilable_memory
+  include ::mod_get_available_memory
 }
 
 node 'web2.example.com' {
