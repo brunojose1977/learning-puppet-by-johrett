@@ -9,7 +9,7 @@ class mod_get_available_memory {
     \n\n"
   }
 
-  file{ '/home/vagrant/memory.txt' :
+  file{ "/home/vagrant/${filename}" :
     ensure => 'present',
     source => "puppet:///modules/mod_get_available_memory/${filename} ",
   }
