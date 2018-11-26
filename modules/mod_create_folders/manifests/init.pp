@@ -7,7 +7,7 @@ class mod_create_folders {
   }
 
   notify{ 'projetos folder notification' :
-    message => '\n\n Criada a pasta projetos\n\n'    
+    message => "\n\n Criada a pasta projetos\n\n"    
   }
 
 }
