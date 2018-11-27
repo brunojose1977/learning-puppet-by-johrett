@@ -22,7 +22,7 @@ class mod_generate_file_link {
     \n\n"
   }
 
-  file { 'Original folder sample file' :
+  file { '/home/vagrant/original_folder/sample.txt' :
     ensure => 'file',
     content => 'This is a original file placed in a original folder.',
   }
