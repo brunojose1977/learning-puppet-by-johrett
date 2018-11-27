@@ -5,8 +5,9 @@ node 'web1.example.com' {
   #include ::mod_test2
   #include ::mod_test3
   #include ::mod_dados_cadastrais
-  include ::mod_get_available_memory
+  #include ::mod_get_available_memory
   #include ::mod_yum_update
+  include ::mod_generate_file_link
 
 }
 
