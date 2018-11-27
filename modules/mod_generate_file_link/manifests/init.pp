@@ -1,12 +1,15 @@
 class mod_generate_file_link {
 
+/*
   file { '/home/vagrant/original_folder' :
     ensure => directory,
   }
-
+  */
+/*
   file { '/home/vagrant/mirrored_folder' :
     ensure => directory,
   }
+  */
 
   ## criando o link simbólico
   file { '/home/vagrant/original_folder' :
