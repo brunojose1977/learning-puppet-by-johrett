@@ -7,7 +7,8 @@ node 'web1.example.com' {
   #include ::mod_dados_cadastrais
   #include ::mod_get_available_memory
   #include ::mod_yum_update
-  include ::mod_generate_file_link
+  #include ::mod_generate_file_link
+  include ::mod_etc_hosts_configure
 
 }
 

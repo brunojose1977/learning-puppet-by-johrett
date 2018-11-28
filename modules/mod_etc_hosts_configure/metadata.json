@@ -1,0 +1,13 @@
+{
+  "name": "Bruno Silva-mod_etc_hosts_configure",
+  "version": "0.1.0",
+  "author": "Bruno Silva",
+  "summary": "Módulo para configurar todos os nodes do Vídeo com o /etc/hosts correto.",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}

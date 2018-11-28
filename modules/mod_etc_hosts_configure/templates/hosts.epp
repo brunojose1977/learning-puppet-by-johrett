@@ -1,0 +1,54 @@
+# Puppet servers -- move the Puppet alias to the one you are testing
+192.168.250.5  puppetmaster.example.com
+192.168.250.6  puppet.example.com puppetserver.example.com
+192.168.250.7  dashserver.example.com dashboard.example.com
+
+# Clients
+192.168.250.10 client.example.com
+192.168.250.20 webserver.example.com
+
+# Video@rnp environment nodes
+
+200.139.7.159	video-rvd-ac-1.rnp.br
+200.17.116.27	video-rvd-al-1.rnp.br
+200.129.156.101	video-rvd-am-1.rnp.br
+200.129.167.55	video-rvd-ap-1.rnp.br
+200.128.2.24	video-rvd-ba-1.rnp.br
+200.129.0.114	video-rvd-ce-1.rnp.br
+138.121.69.69	video-rvd-control.rnp.br
+200.19.119.96	video-rvd-df-1.rnp.br
+200.19.119.100	video-rvd-df-2.rnp.br
+200.130.99.76	video-rvd-df-gw-1-1.rnp.br
+200.130.99.77	video-rvd-df-gw-1-2.rnp.br
+200.130.99.135	video-rvd-df-gw-2-1.rnp.br
+200.130.99.136	video-rvd-df-gw-3-1.rnp.br
+200.130.99.137	video-rvd-df-gw-4-1.rnp.br
+200.137.76.156	video-rvd-es-1.rnp.br
+200.18.160.58	video-rvd-go-1.rnp.br
+138.121.69.91	video-rvd-lmg.rnp.br
+200.137.129.53	video-rvd-ma-1.rnp.br
+138.121.69.70	video-rvd-maestro.rnp.br
+200.131.2.183	video-rvd-mg-1.rnp.br
+200.131.2.188	video-rvd-mg-gw-1.rnp.br
+138.121.69.71	video-rvd-monitor-core.rnp.br
+138.121.69.72	video-rvd-monitor-view.rnp.br
+200.129.207.166	video-rvd-ms-1.rnp.br
+200.129.240.168	video-rvd-mt-1.rnp.br
+200.129.149.21	video-rvd-pa-1.rnp.br
+200.129.75.237	video-rvd-pb-1.rnp.br
+200.133.0.60	video-rvd-pe-1.rnp.br
+200.137.160.146	video-rvd-pi-1.rnp.br
+200.134.255.25	video-rvd-pr-1.rnp.br
+200.134.255.26	video-rvd-pr-gw-1.rnp.br
+138.121.69.99	video-rvd-repositorio.rnp.br
+200.159.252.5	video-rvd-rj-1.rnp.br
+200.159.252.4	video-rvd-rj-gw-1.rnp.br
+200.137.0.22	video-rvd-rn-1.rnp.br
+200.129.139.186	video-rvd-ro-1.rnp.br
+200.129.143.253	video-rvd-rr-1.rnp.br
+200.132.1.28	video-rvd-rs-1.rnp.br
+200.237.193.26	video-rvd-sc-1.rnp.br
+200.17.118.172	video-rvd-se-1.rnp.br
+200.133.192.35	video-rvd-sp-1.rnp.br
+200.133.192.41	video-rvd-sp-gw-1.rnp.br
+200.139.26.41	video-rvd-to-1.rnp.br
